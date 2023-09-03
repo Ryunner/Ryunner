@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('https://i.ibb.co/WH0vFZY/879e58d6-8839-4f91-9469-cd8caa9ba103-1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    /* CSS para controlar el tamaño y la alineación de la imagen */
+    .login__image {
+      max-width: 200px; /* Ajusta el tamaño máximo según tu preferencia */
+      height: auto; /* Mantiene la proporción de aspecto */
+      margin: 0 auto; /* Centra horizontalmente */
+      display: block; /* Elimina espacios en blanco alrededor de la imagen */
+    }
+  </style>
+  <title>Pagina para el amor de mi vida :3</title>
+</head>
+<body>
+  <div class="cont">
+    <div class="demo">
+      <div class="login">
+        <img src="Capibara.png" class="login__image" /> <!-- Aplicar la clase para controlar el tamaño y la alineación de la imagen -->
+        <h1 class="login__title">Para la mas lindota</h1>
+        <div class="login__row">
+          <label for="username" class="login__label">Tú:</label>
+          <input type="text" id="username" class="login__input" placeholder="Yeraldin" />
+        </div>
+        <div class="login__row">
+          <label for="password" class="login__label">El:</label>
+          <input type="text" id="password" class="login__input" placeholder="Amor de mi vida" />
+        </div>
+        <div class="login__row">
+          <input type="checkbox" id="accept" class="login__checkbox" />
+          <label for="accept" class="login__accept-label">¿Aceptas amarme por siempre :3?</label>
+        </div>
+        <button type="button" class="login__submit">ACEPTO</button>
+        <p class="login__message" id="message"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
