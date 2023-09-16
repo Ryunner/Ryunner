@@ -11,12 +11,32 @@
       background-repeat: no-repeat;
     }
     
-    /* CSS para controlar el tamaño y la alineación de la imagen */
     .login__image {
-      max-width: 200px; /* Ajusta el tamaño máximo según tu preferencia */
-      height: auto; /* Mantiene la proporción de aspecto */
-      margin: 0 auto; /* Centra horizontalmente */
-      display: block; /* Elimina espacios en blanco alrededor de la imagen */
+      max-width: 200px; 
+      height: auto; 
+      margin: 0 auto;
+      display: block; 
+    }
+
+    .login__submit {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #9b0482;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login__submit:disabled {
+      background-color: #59106b;
+      cursor: not-allowed;
+    }
+
+    .login__submit:hover {
+      background-color: #59106b;
     }
   </style>
   <title>Pagina para el amor de mi vida :3</title>
@@ -25,25 +45,59 @@
   <div class="cont">
     <div class="demo">
       <div class="login">
-        <img src="Capibara.png" class="login__image" /> <!-- Aplicar la clase para controlar el tamaño y la alineación de la imagen -->
+        <img src="Capibara.png" class="login__image" />  
         <h1 class="login__title">Para la mas lindota</h1>
-        <div class="login__row">
-          <label for="username" class="login__label">Tú:</label>
-          <input type="text" id="username" class="login__input" placeholder="Yeraldin" />
-        </div>
-        <div class="login__row">
-          <label for="password" class="login__label">El:</label>
-          <input type="text" id="password" class="login__input" placeholder="Amor de mi vida" />
-        </div>
-        <div class="login__row">
-          <input type="checkbox" id="accept" class="login__checkbox" />
-          <label for="accept" class="login__accept-label">¿Aceptas amarme por siempre :3?</label>
-        </div>
-        <button type="button" class="login__submit">ACEPTO</button>
+        <form>
+          <div class="login__row">
+            <label for="username" class="login__label">Tú:</label>
+            <input type="text" id="username" class="login__input" placeholder="Yeraldin" required />
+          </div>
+          <div class="login__row">
+            <label for="password" class="login__label">El:</label>
+            <input type="text" id="password" class="login__input" placeholder="Amor de mi vida" required />
+          </div>
+          <div class="login__row">
+            <input type="checkbox" id="accept" class="login__checkbox" required />
+            <label for="accept" class="login__accept-label">¿Aceptas amarme por siempre :3?</label>
+          </div>
+          <button type="submit" class="login__submit" id="submitButton" disabled>ACEPTO</button>
+        </form>
         <p class="login__message" id="message"></p>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var submitButton = document.getElementById("submitButton");
+      var usernameInput = document.getElementById("username");
+      var passwordInput = document.getElementById("password");
+      var acceptCheckbox = document.getElementById("accept");
+  
+      usernameInput.addEventListener("input", toggleSubmitButton);
+      passwordInput.addEventListener("input", toggleSubmitButton);
+      acceptCheckbox.addEventListener("change", toggleSubmitButton);
+  
+      function toggleSubmitButton() {
+        var username = usernameInput.value.trim();
+        var password = passwordInput.value.trim();
+        var accepted = acceptCheckbox.checked;
+  
+        if (username === "Yeraldin" && password === "Amor de mi vida" && accepted) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+  
+      submitButton.addEventListener("click", function (e) {
+        if (!submitButton.disabled) {
+          e.preventDefault();
+          window.location.href = "muakmuaks.html";
+        }
+      });
+  
+      toggleSubmitButton();
+    });
+  </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Agregar estilos personalizados aquí */
+
 
 .cont {
     position: relative;
@@ -32,7 +32,7 @@
   
   .login__label {
     font-size: 1.2rem;
-    color: #fff; /* Cambia el color de las etiquetas a blanco */
+    color: #fff; 
     margin-right: 10px;
   }
   
@@ -51,7 +51,7 @@
   
   .login__accept-label {
     font-size: 0.9rem;
-    color: #fff; /* Cambia el color del texto de aceptación a blanco */
+    color: #fff; 
   }
   
   .login__submit {
@@ -63,7 +63,7 @@
     border: none;
     border-radius: 5px;
     transition: background 0.3s ease;
-    margin-top: 1.5rem; /* Aumenta el espacio entre el botón y otros elementos */
+    margin-top: 1.5rem; 
   }
   
   .login__submit:hover {
@@ -76,9 +76,9 @@
     margin-top: 20px;
   }
   
-  /* Resto de tu CSS existente */
+
   
   .login__checkbox:checked + .login__accept-label {
-    color: #FF3366; /* Cambia el color del texto del botón a morado cuando se marca */
+    color: #FF3366;
   }
   
